@@ -239,3 +239,76 @@ if (dayPath && formZones.length && "IntersectionObserver" in window) {
 
   formZones.forEach((zone) => formZoneObserver.observe(zone));
 }
+
+const rsvpForm = document.querySelector("[data-foreverlove-rsvp]");
+const rsvpFieldset = rsvpForm?.querySelector("fieldset");
+const rsvpSubmit = rsvpForm?.querySelector('button[type="submit"]');
+const rsvpStatus = rsvpForm?.querySelector(".rsvp-status");
+const rsvpConfig = window.FOREVERLOVE_RSVP || {};
+const rsvpReady = Boolean(
+  rsvpConfig.enabled
+  && rsvpConfig.apiBaseUrl
+  && rsvpConfig.formKey
+  && rsvpConfig.publishableKey
+);
+
+const setRsvpState = (state, message) => {
+  if (!rsvpForm || !rsvpStatus) return;
+  rsvpForm.dataset.state = state;
+  rsvpStatus.textContent = message;
+};
+
+if (rsvpReady && rsvpFieldset && rsvpSubmit) {
+  rsvpFieldset.disabled = false;
+  rsvpSubmit.disabled = false;
+  rsvpSubmit.textContent = "送出 RSVP";
+
+  rsvpForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!rsvpForm.reportValidity()) return;
+
+    const formData = new FormData(rsvpForm);
+    const payload = {
+      name: String(formData.get("name") || "").trim(),
+      email: String(formData.get("email") || "").trim() || null,
+      attendance: String(formData.get("attendance") || ""),
+      message: String(formData.get("message") || "").trim() || null,
+      company: String(formData.get("company") || "")
+    };
+
+    rsvpFieldset.disabled = true;
+    rsvpSubmit.textContent = "送出中…";
+    setRsvpState("loading", "正在安全送出你的回覆，請稍候。");
+
+    try {
+      const apiBaseUrl = String(rsvpConfig.apiBaseUrl).replace(/\/$/, "");
+      const response = await fetch(`${apiBaseUrl}/public/forms/${encodeURIComponent(rsvpConfig.formKey)}/responses`, {
+        method: "POST",
+        mode: "cors",
+        credentials: "omit",
+        headers: {
+          "Content-Type": "application/json",
+          "X-ForeverLove-Key": rsvpConfig.publishableKey
+        },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        const validationMessage = result.errors
+          ? Object.values(result.errors).flat()[0]
+          : null;
+        throw new Error(validationMessage || result.message || "回覆暫時無法送出。");
+      }
+
+      rsvpForm.reset();
+      setRsvpState("success", result.message || "回覆已成功送出，謝謝你。");
+    } catch (error) {
+      setRsvpState("error", `${error.message || "回覆暫時無法送出。"} 請稍後再試，或直接聯絡新人。`);
+    } finally {
+      rsvpFieldset.disabled = false;
+      rsvpSubmit.disabled = false;
+      rsvpSubmit.textContent = "送出 RSVP";
+    }
+  });
+}

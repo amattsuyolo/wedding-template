@@ -20,6 +20,7 @@ https://amattsuyolo.github.io/wedding-template/
 - Schedule and venue information
 - Responsive image gallery and lightbox
 - RSVP and guest-message interface
+- Optional ForeverLove RSVP API integration for static hosting
 - Accessible semantic structure and reduced-motion support
 - Local fonts and optimized WebP images
 
@@ -59,12 +60,15 @@ scripts/         Build, verification, and preview utilities
 index.html       Page content and semantic structure
 styles.css       Layout, visual design, and responsive styles
 script.js        Countdown, gallery, forms, and interactions
+form-config.js   Public RSVP connection settings
 server.mjs       Local static preview server
 ```
 
 ## Customization
 
 Before using the template for another wedding, replace the example couple names, date, venue, copy, and images. Review the RSVP interface before connecting it to a real form or database.
+
+The RSVP form remains disabled until `enabled`, `formKey`, and `publishableKey` are configured in `form-config.js`. The publishable key is designed for browser use; restrict each integration to the exact allowed website origins in ForeverLove.
 
 ## Privacy
 

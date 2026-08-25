@@ -5,7 +5,7 @@ await import("./verify.mjs");
 
 const output = new URL("../dist/", import.meta.url);
 const root = new URL("../", import.meta.url);
-const files = ["index.html", "styles.css", "script.js", "assets"];
+const files = ["index.html", "styles.css", "script.js", "form-config.js", "assets"];
 const sourceFontFiles = [
   "assets/fonts/InstrumentSerif-Regular.ttf",
   "assets/fonts/InstrumentSerif-Italic.ttf",

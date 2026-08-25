@@ -10,6 +10,7 @@
     <link rel="preload" href="assets/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="assets/images/photo-04.webp" as="image" type="image/webp" imagesrcset="assets/images/photo-04-720.webp 720w, assets/images/photo-04.webp 1448w" imagesizes="(max-width: 720px) 100vw, 75vw" fetchpriority="high" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="form-config.js"></script>
     <script src="script.js" type="module"></script>
   </head>
   <body>
@@ -288,15 +289,17 @@
           <h2 id="rsvp-title">RSVP</h2>
           <p id="rsvp-help">線上回覆將於 2027 年 3 月 1 日開放，請於 4 月 18 日前完成。每份邀請請由一位代表回覆，並註明飲食需求、同行賓客與停車車號。</p>
         </header>
-        <form aria-describedby="rsvp-help" autocomplete="on">
+        <form data-foreverlove-rsvp aria-describedby="rsvp-help rsvp-status" autocomplete="on">
           <fieldset disabled aria-describedby="rsvp-help">
             <legend>Attendance details</legend>
             <label>姓名<input type="text" name="name" autocomplete="name" maxlength="100" required placeholder="例如：王小明" /></label>
             <label>電子郵件<input type="email" name="email" autocomplete="email" inputmode="email" maxlength="254" required placeholder="name@example.com" /></label>
             <label>出席狀態<select name="attendance" required><option value="">請選擇</option><option value="attending">出席</option><option value="not-attending">無法出席</option></select></label>
             <label class="rsvp-message">飲食需求、交通與給新人的話<textarea name="message" rows="4" maxlength="1000" placeholder="例如：素食、車號 ABC-1234，或給新人的話"></textarea></label>
+            <label class="rsvp-honeypot" aria-hidden="true">公司<input type="text" name="company" tabindex="-1" autocomplete="off" /></label>
             <button type="submit" disabled>RSVP 將於 3 月 1 日開放</button>
           </fieldset>
+          <p class="rsvp-status" id="rsvp-status" role="status" aria-live="polite"></p>
         </form>
       </section>
 

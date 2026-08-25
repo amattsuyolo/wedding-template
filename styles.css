@@ -1289,6 +1289,18 @@ fieldset:disabled label {
   grid-column: 1 / 3;
 }
 
+.rsvp-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 button[type="submit"] {
   grid-column: 1 / 3;
   min-height: 3.5rem;
@@ -1302,6 +1314,34 @@ button[type="submit"] {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: not-allowed;
+}
+
+.rsvp fieldset:not(:disabled) button[type="submit"] {
+  color: var(--carbon);
+  background: var(--paper);
+  cursor: pointer;
+}
+
+.rsvp fieldset:not(:disabled) button[type="submit"]:hover {
+  color: var(--paper);
+  background: var(--carbon);
+}
+
+.rsvp-status {
+  min-height: 1.6em;
+  margin: 1.25rem 0 0;
+  color: var(--signal-soft);
+  line-height: 1.6;
+}
+
+.rsvp form[data-state="success"] .rsvp-status {
+  color: #f5f0c7;
+  font-weight: 700;
+}
+
+.rsvp form[data-state="error"] .rsvp-status {
+  color: #fff1e8;
+  font-weight: 700;
 }
 
 .guest-messages {
