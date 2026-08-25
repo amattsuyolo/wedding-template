@@ -4,7 +4,7 @@ A responsive, editorial-style wedding website template built with semantic HTML,
 
 ## Live demo
 
-The GitHub Pages preview will be available at:
+View the GitHub Pages preview at:
 
 https://amattsuyolo.github.io/wedding-template/
 
