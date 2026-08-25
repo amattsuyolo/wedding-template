@@ -1,0 +1,12 @@
+{
+  "name": "fifi-leo-wedding",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "check": "node --check script.js && node scripts/verify.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node server.mjs dist"
+  }
+}

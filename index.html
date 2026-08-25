@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f3f1ea" />
+    <meta name="description" content="Fifi 與 Leo 的正式婚禮網站。" />
+    <title>Fifi & Leo — 兩人之間</title>
+    <link rel="preload" href="assets/fonts/InstrumentSerif-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/images/photo-04.webp" as="image" type="image/webp" imagesrcset="assets/images/photo-04-720.webp 720w, assets/images/photo-04.webp 1448w" imagesizes="(max-width: 720px) 100vw, 75vw" fetchpriority="high" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳至主要內容</a>
+
+    <header class="site-header" aria-label="主要導覽">
+      <a class="site-mark" href="#top" aria-label="Fifi 與 Leo 首頁">
+        <span>Fifi</span><i aria-hidden="true"></i><span>Leo</span>
+      </a>
+      <nav class="primary-nav" aria-label="網站章節">
+        <a href="#story">Story</a>
+        <a href="#the-day">The day</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#rsvp">RSVP</a>
+      </nav>
+      <details class="site-menu">
+        <summary>Explore</summary>
+        <nav aria-label="行動版網站章節">
+          <a href="#story">Story</a>
+          <a href="#the-day">The day</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#rsvp">RSVP</a>
+        </nav>
+      </details>
+    </header>
+
+    <nav class="day-path" aria-label="婚禮當日快速導覽">
+      <a class="day-path__origin" href="#the-day">The day</a>
+      <span class="day-path__horizon" aria-hidden="true"></span>
+      <a href="#schedule">Schedule</a>
+      <a href="#venue">Venue</a>
+      <a class="day-path__primary" href="#rsvp">RSVP</a>
+    </nav>
+
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <figure class="hero-plane hero-plane--upper">
+          <picture>
+            <source media="(max-width: 720px)" srcset="assets/images/photo-04-720.webp" />
+            <img src="assets/images/photo-04.webp" width="1448" height="1086" alt="身穿婚禮服裝的一對伴侶背向鏡頭，相依望向夕陽山景，頭紗隨風展開。" fetchpriority="high" />
+          </picture>
+        </figure>
+
+        <p class="hero-thesis">愛不是把兩個人合併成一個，<br />而是共同維持兩人之間的空間。</p>
+
+        <div class="hero-interval">
+          <span class="horizon-line" aria-hidden="true"></span>
+          <h1 id="hero-title">
+            <span class="hero-name hero-name--fifi" aria-hidden="true">Fifi</span>
+            <span class="registration" aria-hidden="true"></span>
+            <span class="hero-name hero-name--leo" aria-hidden="true">Leo</span>
+            <span class="sr-only">Fifi 與 Leo</span>
+          </h1>
+        </div>
+
+        <div class="hero-note">
+          <p>Two lives,<br />held in relation.</p>
+          <a href="#story">Enter their story <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <figure class="hero-plane hero-plane--lower">
+          <picture>
+            <source media="(max-width: 720px)" srcset="assets/images/photo-07-720.webp" />
+            <img src="assets/images/photo-07.webp" width="1448" height="1086" alt="身穿婚禮服裝的一對伴侶在花園中靠近彼此、相互凝視。" />
+          </picture>
+        </figure>
+
+        <p class="hero-status"><span>Date</span> <time datetime="2027-05-22">22 May 2027</time></p>
+      </section>
+
+      <section class="couple-intro" aria-labelledby="couple-title">
+        <div class="section-intro">
+          <h2 id="couple-title">Two people.<br /><em>One living interval.</em></h2>
+          <p>Fifi 與 Leo 不需要成為彼此的影子。他們保留自己的步調，也願意在每一次選擇裡，為對方多走近一步。</p>
+        </div>
+        <div class="portrait-pair">
+          <figure class="portrait portrait--a">
+            <picture>
+              <source media="(max-width: 720px)" srcset="assets/images/photo-05-720.webp" />
+              <img src="assets/images/photo-05.webp" width="1086" height="1448" loading="lazy" alt="一位身穿婚禮服裝、手持花束的人物在山景前安靜站立。" />
+            </picture>
+            <figcaption>A quiet beginning <span>one life, fully seen</span></figcaption>
+          </figure>
+          <div class="portrait-interval" aria-hidden="true">
+            <span>Fifi</span><i></i><span>Leo</span>
+          </div>
+          <figure class="portrait portrait--b">
+            <picture>
+              <source media="(max-width: 720px)" srcset="assets/images/photo-11-720.webp" />
+              <img src="assets/images/photo-11.webp" width="1086" height="1448" loading="lazy" alt="一位身穿淺色正式禮服的人物站在山景與拱廊前。" />
+            </picture>
+            <figcaption>A shared horizon <span>another life, drawing near</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="story" id="story" aria-labelledby="story-title">
+        <div class="story-heading">
+          <h2 id="story-title">Our Story</h2>
+          <p>有些愛情不是突然發生的傳奇，而是在許多平凡日子裡，慢慢確認彼此值得信任、值得等待，也值得一起想像未來。</p>
+        </div>
+        <figure class="story-image story-image--memory">
+          <picture>
+            <source media="(max-width: 720px)" srcset="assets/images/photo-06-720.webp" />
+            <img src="assets/images/photo-06.webp" width="1448" height="1086" loading="lazy" alt="一對伴侶坐在桌邊靠近彼此，桌上有花與餐點。" />
+          </picture>
+          <figcaption>The table between them</figcaption>
+        </figure>
+        <div class="story-interval">
+          <span aria-hidden="true"></span>
+          <p>他們保留彼此的不同，也把每一次靠近，都變成一個共同的選擇。</p>
+        </div>
+        <figure class="story-image story-image--detail">
+          <picture>
+            <source media="(max-width: 720px)" srcset="assets/images/photo-14-720.webp" />
+            <img src="assets/images/photo-14.webp" width="1122" height="1402" loading="lazy" alt="一對伴侶臉龐貼近，雙手交握並佩戴戒指。" />
+          </picture>
+          <figcaption>A promise held close</figcaption>
+        </figure>
+      </section>
+
+      <section class="countdown" id="countdown" aria-labelledby="countdown-title">
+        <div>
+          <h2 id="countdown-title">The day,<br /><em>held in time.</em></h2>
+          <p>我們會在 <time datetime="2027-05-22">2027 年 5 月 22 日</time>，與最想念的人一起走進這一天。</p>
+        </div>
+        <div class="countdown-values" data-countdown="2027-05-22T16:00:00+08:00" aria-label="距離婚禮還有一段時間">
+          <div><strong data-countdown-unit="days" aria-hidden="true">—</strong><span>Days</span></div>
+          <div><strong data-countdown-unit="hours" aria-hidden="true">—</strong><span>Hours</span></div>
+          <div><strong data-countdown-unit="minutes" aria-hidden="true">—</strong><span>Minutes</span></div>
+          <div><strong data-countdown-unit="seconds" aria-hidden="true">—</strong><span>Seconds</span></div>
+        </div>
+      </section>
+
+      <section class="featured" aria-labelledby="featured-title">
+        <div class="featured-heading">
+          <h2 id="featured-title">Near, far,<br /><em>moving.</em></h2>
+          <p>有時並肩看向遠方，有時只需要一個眼神。距離改變了，兩個人仍在同一片光裡。</p>
+        </div>
+        <figure class="featured-image featured-image--wide">
+          <picture>
+            <source media="(max-width: 720px)" srcset="assets/images/photo-03-720.webp" />
+            <img src="assets/images/photo-03.webp" width="1448" height="1086" loading="lazy" alt="一對伴侶在夕陽山景中全身相擁，長裙擺延伸至畫面前方。" />
+          </picture>
+          <figcaption>Where the world opens</figcaption>
+        </figure>
+        <figure class="featured-image featured-image--close">
+          <picture>
+            <source media="(max-width: 720px)" srcset="assets/images/photo-10-720.webp" />
+            <img src="assets/images/photo-10.webp" width="1448" height="1086" loading="lazy" alt="一對伴侶坐在花叢中，閉眼靠近彼此。" />
+          </picture>
+          <figcaption>A quiet kind of closeness</figcaption>
+        </figure>
+        <figure class="featured-image featured-image--motion">
+          <picture>
+            <source media="(max-width: 720px)" srcset="assets/images/photo-12-720.webp" />
+            <img src="assets/images/photo-12.webp" width="1122" height="1402" loading="lazy" alt="一對伴侶在花園中牽手旋轉，裙擺向外展開。" />
+          </picture>
+          <figcaption>Moving toward the same day</figcaption>
+        </figure>
+      </section>
+
+      <section class="wedding-day" id="the-day" aria-labelledby="day-title">
+        <header class="day-heading">
+          <h2 id="day-title">Wedding information</h2>
+          <p>期待你來到陽明山，在傍晚的光裡見證我們的承諾，接著一起吃飯、說笑，留下一個溫暖的夜晚。</p>
+        </header>
+        <dl class="day-facts">
+          <div><dt>Date</dt><dd><time datetime="2027-05-22">2027 年 5 月 22 日，星期六</time></dd></div>
+          <div><dt>Time</dt><dd>15:30 迎賓 · 16:00 證婚</dd></div>
+          <div><dt>Venue</dt><dd>The Garden Hall · Yangmingshan</dd></div>
+          <div><dt>RSVP</dt><dd>請於 2027 年 4 月 18 日前回覆</dd></div>
+        </dl>
+      </section>
+
+      <section class="schedule" id="schedule" aria-labelledby="schedule-title">
+        <div class="schedule-heading">
+          <h2 id="schedule-title">Wedding schedule</h2>
+          <p>建議於證婚開始前 30 分鐘抵達，留一點時間問候彼此，也讓這一天從容展開。</p>
+        </div>
+        <ol class="schedule-list">
+          <li><time datetime="15:30">15:30</time><div><strong>迎賓入席</strong><span>抵達場地、寄放物品，與熟悉的人先說聲好久不見。</span></div></li>
+          <li><time datetime="16:00">16:00</time><div><strong>證婚儀式</strong><span>請於儀式開始前就座，一起見證 Fifi 與 Leo 的承諾。</span></div></li>
+          <li><time datetime="17:00">17:00</time><div><strong>花園小聚</strong><span>享用飲品與點心，也歡迎與新人及親友合影。</span></div></li>
+          <li><time datetime="18:00">18:00</time><div><strong>晚宴</strong><span>入席用餐，分享故事、祝福與一個值得記住的夜晚。</span></div></li>
+          <li><time datetime="20:30">20:30</time><div><strong>道別與祝福</strong><span>在離開之前，再和 Fifi 與 Leo 好好說一聲恭喜。</span></div></li>
+        </ol>
+      </section>
+
+      <section class="venue" id="venue" aria-labelledby="venue-title">
+        <header>
+          <h2 id="venue-title">Venue & transportation</h2>
+          <p>婚禮位於陽明山。山區傍晚溫度較低，建議攜帶薄外套，並優先搭乘婚禮接駁車前往。</p>
+        </header>
+        <div class="venue-columns">
+          <section aria-labelledby="venue-place-title">
+            <h3 id="venue-place-title">Place</h3>
+            <p class="pending-line">The Garden Hall</p>
+            <address>台北市士林區菁山路 101 號<br />Yangmingshan, Taipei</address>
+            <span class="venue-status">Garden ceremony · Indoor dinner</span>
+          </section>
+          <section aria-labelledby="transport-title">
+            <h3 id="transport-title">Transportation</h3>
+            <p class="pending-line">劍潭站婚禮接駁</p>
+            <p>接駁車由捷運劍潭站 1 號出口出發，班次為 14:45、15:10、15:35；回程於 20:30、21:00 發車。場地停車位有限，開車前往請於 RSVP 登記車號。</p>
+          </section>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+        <header>
+          <h2 id="gallery-title">A sequence<br /><em>of closeness.</em></h2>
+          <div class="gallery-guidance">
+            <p>從遠景走近一個眼神、一個擁抱與一雙交握的手。這些照片記下兩個人如何在同一片光裡靠近。</p>
+            <div class="gallery-controls" aria-label="相簿控制">
+              <button type="button" data-gallery-previous aria-label="上一張照片"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" /></svg></button>
+              <span aria-live="polite"><b data-gallery-current>1</b> / <b data-gallery-total>5</b></span>
+              <button type="button" data-gallery-next aria-label="下一張照片"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg></button>
+            </div>
+          </div>
+        </header>
+        <noscript><p class="gallery-no-script">所有照片仍可直接瀏覽；開啟大圖需要啟用 JavaScript。</p></noscript>
+        <div class="gallery-sequence">
+          <figure class="gallery-item gallery-item--landscape">
+            <button type="button" data-gallery-src="assets/images/photo-08.webp" data-gallery-caption="Under the same sky">
+              <picture><source media="(max-width: 720px)" srcset="assets/images/photo-08-720.webp" /><img src="assets/images/photo-08.webp" width="1448" height="1086" loading="lazy" alt="一對伴侶相擁站在遼闊山谷與花草之間。" /></picture>
+              <span>View photograph</span>
+            </button>
+            <figcaption>Under the same sky</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-item--framed">
+            <button type="button" data-gallery-src="assets/images/photo-09.webp" data-gallery-caption="Where the garden holds them">
+              <picture><source media="(max-width: 720px)" srcset="assets/images/photo-09-720.webp" /><img src="assets/images/photo-09.webp" width="1448" height="1086" loading="lazy" alt="一對伴侶在花朵與拱廊圍繞的場景中相擁。" /></picture>
+              <span>View photograph</span>
+            </button>
+            <figcaption>Where the garden holds them</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-item--ceremony">
+            <button type="button" data-gallery-src="assets/images/photo-15.webp" data-gallery-caption="A question, witnessed">
+              <picture><source media="(max-width: 720px)" srcset="assets/images/photo-15-720.webp" /><img src="assets/images/photo-15.webp" width="1122" height="1402" loading="lazy" alt="一位身穿婚禮服裝的伴侶跪下展示戒指盒，另一位伴侶與周圍賓客注視這個時刻。" /></picture>
+              <span>View photograph</span>
+            </button>
+            <figcaption>A question, witnessed</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-item--intimate">
+            <button type="button" data-gallery-src="assets/images/photo-02.webp" data-gallery-caption="Closer than words">
+              <picture><source media="(max-width: 720px)" srcset="assets/images/photo-02-720.webp" /><img src="assets/images/photo-02.webp" width="1672" height="941" loading="lazy" alt="一對伴侶在夕陽山景前閉眼相擁。" /></picture>
+              <span>View photograph</span>
+            </button>
+            <figcaption>Closer than words</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-item--detail">
+            <button type="button" data-gallery-src="assets/images/photo-14.webp" data-gallery-caption="The promise in their hands">
+              <picture><source media="(max-width: 720px)" srcset="assets/images/photo-14-720.webp" /><img src="assets/images/photo-14.webp" width="1122" height="1402" loading="lazy" alt="一對伴侶貼近臉龐並交握戴著戒指的雙手。" /></picture>
+              <span>View photograph</span>
+            </button>
+            <figcaption>The promise in their hands</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="faq" id="faq" aria-labelledby="faq-title">
+        <header>
+          <h2 id="faq-title">Before the day</h2>
+          <p>為了讓每位賓客都能從容參與，以下先整理最常需要確認的事項。</p>
+        </header>
+        <div class="faq-list">
+          <details><summary>服裝與禮儀</summary><p>建議穿著半正式或正式服裝，選擇能自在行走的鞋履。為了保留新人的婚禮色彩，也請避免以全白造型出席。</p></details>
+          <details><summary>同行、兒童與座位</summary><p>請依喜帖上的邀請姓名回覆；如有攜伴或兒童名額，會一併顯示於正式 RSVP。座位將依最終回覆安排。</p></details>
+          <details><summary>交通、停車與無障礙需求</summary><p>建議搭乘劍潭站婚禮接駁車。自行開車請於 RSVP 登記車號；如需要無障礙入口、輪椅空間或其他協助，也請在留言欄告訴我們。</p></details>
+        </div>
+      </section>
+
+      <section class="rsvp" id="rsvp" aria-labelledby="rsvp-title">
+        <header>
+          <h2 id="rsvp-title">RSVP</h2>
+          <p id="rsvp-help">線上回覆將於 2027 年 3 月 1 日開放，請於 4 月 18 日前完成。每份邀請請由一位代表回覆，並註明飲食需求、同行賓客與停車車號。</p>
+        </header>
+        <form aria-describedby="rsvp-help" autocomplete="on">
+          <fieldset disabled aria-describedby="rsvp-help">
+            <legend>Attendance details</legend>
+            <label>姓名<input type="text" name="name" autocomplete="name" maxlength="100" required placeholder="例如：王小明" /></label>
+            <label>電子郵件<input type="email" name="email" autocomplete="email" inputmode="email" maxlength="254" required placeholder="name@example.com" /></label>
+            <label>出席狀態<select name="attendance" required><option value="">請選擇</option><option value="attending">出席</option><option value="not-attending">無法出席</option></select></label>
+            <label class="rsvp-message">飲食需求、交通與給新人的話<textarea name="message" rows="4" maxlength="1000" placeholder="例如：素食、車號 ABC-1234，或給新人的話"></textarea></label>
+            <button type="submit" disabled>RSVP 將於 3 月 1 日開放</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <section class="guest-messages" id="messages" aria-labelledby="messages-title">
+        <div>
+          <h2 id="messages-title">Guest messages</h2>
+          <p>一句簡單的祝福，也會成為這段旅程的一部分。留言將與 RSVP 同步開放，你的話會留在這裡，陪 Fifi 與 Leo 走向婚禮那天。</p>
+        </div>
+        <form aria-label="賓客留言將於 2027 年 3 月 1 日開放" autocomplete="on">
+          <fieldset disabled>
+            <label>姓名<input type="text" name="guest-name" autocomplete="name" maxlength="100" required placeholder="例如：王小明" /></label>
+            <label>留言<textarea name="guest-message" rows="3" maxlength="1000" required placeholder="寫下一句給 Fifi 與 Leo 的祝福"></textarea></label>
+            <button type="submit" disabled>留言將於 3 月 1 日開放</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <figure>
+          <picture>
+            <source media="(max-width: 720px)" srcset="assets/images/photo-01-720.webp" />
+            <img src="assets/images/photo-01.webp" width="1672" height="941" loading="lazy" alt="一對伴侶穿著婚禮服裝相依站立，身旁保留大片安靜留白。" />
+          </picture>
+        </figure>
+        <div>
+          <h2 id="closing-title"><span>Fifi</span><i aria-hidden="true"></i><span>Leo</span></h2>
+          <p>謝謝你走進我們的故事。很期待在那一天，與你一起分享光、笑聲，以及我們人生的新一頁。</p>
+          <a href="#top">Back to the horizon <span aria-hidden="true">↑</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Fifi & Leo</p>
+      <nav aria-label="頁尾導覽"><a href="#the-day">The day</a><a href="#venue">Venue</a><a href="#rsvp">RSVP</a></nav>
+      <p>22 May 2027 · Yangmingshan</p>
+    </footer>
+
+    <dialog class="photo-dialog" id="photo-dialog" aria-labelledby="photo-dialog-caption">
+      <button type="button" data-dialog-close>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" /></svg>
+        <span>Close</span>
+      </button>
+      <div class="photo-dialog__feedback" aria-live="polite">
+        <p data-dialog-status></p>
+        <button type="button" data-image-retry hidden>重新載入</button>
+      </div>
+      <p id="photo-dialog-caption"></p>
+    </dialog>
+
+  </body>
+</html>
