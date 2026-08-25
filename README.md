@@ -4,7 +4,11 @@ A responsive, editorial-style wedding website template built with semantic HTML,
 
 ## Live demo
 
-View the GitHub Pages preview at:
+Production demo:
+
+https://template-01.foreverlove.com.tw/
+
+GitHub Pages mirror:
 
 https://amattsuyolo.github.io/wedding-template/
 
