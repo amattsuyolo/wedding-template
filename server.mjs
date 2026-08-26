@@ -56,7 +56,7 @@ createServer((request, response) => {
   response.writeHead(200, {
     "content-type": mime[extname(resolvedPath)] || "application/octet-stream",
     "cache-control": "no-cache",
-    "content-security-policy": "default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+    "content-security-policy": "default-src 'self'; connect-src 'self' http://127.0.0.1 http://localhost https://foreverlove.com.tw; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
     "referrer-policy": "strict-origin-when-cross-origin",
     "x-content-type-options": "nosniff"
   });

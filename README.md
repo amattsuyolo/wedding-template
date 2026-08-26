@@ -68,11 +68,11 @@ server.mjs       Local static preview server
 
 Before using the template for another wedding, replace the example couple names, date, venue, copy, and images. Review the RSVP interface before connecting it to a real form or database.
 
-The RSVP form remains disabled until `enabled`, `formKey`, and `publishableKey` are configured in `form-config.js`. The publishable key is designed for browser use; restrict each integration to the exact allowed website origins in ForeverLove.
+RSVP is configured in `form-config.js`. It selects the local ForeverLove API on `127.0.0.1` or `localhost`, and the HTTPS API on deployed websites. A publishable key is designed for browser use, but every integration must still be restricted to exact allowed website origins in ForeverLove. Replace the current form and publishable keys when reusing this template for another wedding.
 
 ## Privacy
 
-Do not commit guest responses, contact details, API keys, environment files, or other private wedding data to a public repository. This repository contains presentation code and example content only.
+Do not commit guest responses, contact details, secret API keys, administrator credentials, environment files, or other private wedding data to a public repository. ForeverLove publishable keys may appear in browser code, but they can only submit forms and must be protected by an exact Origin allowlist.
 
 ## License
 
